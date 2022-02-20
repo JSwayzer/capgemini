@@ -8,17 +8,26 @@
 # Contém no mínimo 1 letra em minúsculo.
 # Contém no mínimo 1 letra em maiúsculo.
 # Contém no mínimo 1 caractere especial. Os caracteres especiais são: !@#$%^&*()-+
+#
 # Débora digitou uma string aleatória no campo de senha, porém ela não tem certeza se é uma senha forte.
-# Para ajudar Débora, construa um algoritmo que informe qual é o número mínimo de caracteres que devem ser adicionados para uma string qualquer ser considerada segura.
+# Para ajudar Débora, construa um algoritmo que informe qual é o número mínimo de caracteres que devem
+# ser adicionados para uma string qualquer ser considerada segura.
 #
 # Exemplo:
 # Entrada:
 # Ya3
-#
-#
 # Saída:
 # 3
-#
-#
 # Explicação:
-# Ela pode tornar a senha segura adicionando 3 caracteres, por exemplo, &ab, transformando a senha em Ya3&ab. 2 caracteres não são suficientes visto que a senha precisa ter um tamanho mínimo de 6 caracteres.
+# Ela pode tornar a senha segura adicionando 3 caracteres, por exemplo, &ab, transformando a senha em Ya3&ab.
+# 2 caracteres não são suficientes visto que a senha precisa ter um tamanho mínimo de 6 caracteres.
+
+
+senha = input("Informe a senha a ser testada: ")
+tamanho = len(senha)
+if tamanho >= 6:
+    print("Senha Okay!")
+else:
+    print(6 - tamanho)
+print(tamanho)
+
