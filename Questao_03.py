@@ -21,14 +21,22 @@
 # A lista de todos os anagramas pares são:
 # [i, i], [q, q] e [ifa, fai] que estão nas posições [[0], [3]], [[8],  [9]] e [[0, 1, 2], [1, 2, 3]].
 
+
 # Receber a palavra a ser testada para identificar quantos anagramas
-palavra = input("Digita a palavra a ser verificada: ")
-lista = list(palavra)  # realizar o cast da variável palavra do tipo string para list
-tamanho = len(lista)  # determinar o tamanho da variável ajudará a determinar o número de testes a ser realizado
+palavra = input("Informe a palavra a ser verificada: ")
+# realizar o cast da variável palavra do tipo string para list
+lista = list(palavra)
+# determinar o tamanho da variável ajudará a determinar o número de testes a ser realizado
+tamanho = len(lista)
+# inicializa o contador em zero
+contador = 0
+
+# verificar 1 por 1
 for i in range(len(lista)):
     print(lista[i])
-
-# Verificar um caracter por vez
-
-# Verificar dois caracteres por vez
-
+    # verificar se lista[i] ocorre novamente na lista
+    for j in range(1+i, len(lista)):
+        print(lista[i], lista[j])
+        if lista[i] == lista[j]:
+            contador += 1
+    print("\n", contador)
