@@ -33,10 +33,24 @@ contador = 0
 
 # verificar 1 por 1
 for i in range(len(lista)):
-    print(lista[i])
+    # print(lista[i])
     # verificar se lista[i] ocorre novamente na lista
     for j in range(1+i, len(lista)):
-        print(lista[i], lista[j])
+        # print(lista[i], lista[j])
         if lista[i] == lista[j]:
             contador += 1
-    print("\n", contador)
+
+# verificar substring da palavra para encontrar anagramas
+# Tamanho Máximo do Anagrama
+tma = tamanho // 2
+for i in range(len(lista)):
+    for j in range(1+i, len(lista)):
+        anagrama1 = (palavra[i:j])
+        print(palavra[i:j])
+        anagrama2 = (palavra[i+1:j+1])
+        print(palavra[i+1:j+1])
+        # anagrama = palavra[i:tma]
+        # s2 = "silent"
+        if sorted(anagrama1) == sorted(anagrama2):
+            contador += 1
+    print(contador)
