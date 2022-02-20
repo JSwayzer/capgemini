@@ -22,12 +22,15 @@
 # Ela pode tornar a senha segura adicionando 3 caracteres, por exemplo, &ab, transformando a senha em Ya3&ab.
 # 2 caracteres não são suficientes visto que a senha precisa ter um tamanho mínimo de 6 caracteres.
 
-
+# Receber a senha informada pelo usuário
 senha = input("Informe a senha a ser testada: ")
+# Receber o tamanho da senha
 tamanho = len(senha)
+# Verificar se a senha atende o requisito de tamanho
 if tamanho >= 6:
     print("Senha Okay!")
 else:
+    # informar qual é o número mínimo de caracteres que devem
+    # ser adicionados para uma string qualquer ser considerada segura
     print(6 - tamanho)
-print(tamanho)
 
