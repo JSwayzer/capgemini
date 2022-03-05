@@ -46,7 +46,9 @@ for i in range(len(lista)):
         substring1 = (palavra[i:j])
         # Inicializar a variável com a substring na posição inicial i+1 da lista com o posição final em j+1
         substring2 = (palavra[i+1:j+1])
+        print(substring1, substring2)
         # Verificar se substring1 é anagrama da substring2
-        if sorted(substring1) == sorted(substring2):
-            contador += 1
+        if substring1 or substring2 < 2:
+            if sorted(substring1) == sorted(substring2):
+                contador += 1
 print(contador)
