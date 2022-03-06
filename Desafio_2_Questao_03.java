@@ -109,10 +109,13 @@ public class Desafio_2_Questao_03
     	
     	for (int i = 0; i < separar.length; i++) 
     	{
-    		System.out.print(i+1)
+    		for (int j = 0; j < raiz; j++)
+    		{
+    			System.out.println(separar[i] + "\t" + i + "\t" + j);
+    		}
     	}
 
-    	System.out.println(r);
+    	//System.out.println(r);
     	System.out.println(Arrays.toString(separar));
     	
     	
