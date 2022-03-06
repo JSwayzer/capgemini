@@ -3,15 +3,19 @@ import java.util.Arrays;
 /*
  * # Questão 03
  * 
- * Um texto precisa ser encriptado usando o seguinte esquema. Primeiro, os espaços são removidos do texto. Então, os caracteres são escritos em um grid, no qual as linhas e colunas tem as seguintes regras:
+ * Um texto precisa ser encriptado usando o seguinte esquema. 
+ * Primeiro, os espaços são removidos do texto. 
+ * Então, os caracteres são escritos em um grid, no qual as linhas e 
+ * colunas tem as seguintes regras:
  * 
- * <=linha<=coluna<=
+ * 							SQRT(T)<=linha<=coluna<=SQRT(T)
  * 
  *     Considere T, como o tamanho do texto.
  *     Se certifique de que linhas x colunas >= .
  *     Se múltiplos grids satisfazem as condições, escolha aquele com a menor área.
  * 
- * Escreva um algoritmo que ao receber uma string s, mostre a mensagem encriptada de acordo com as regras descritas.
+ * Escreva um algoritmo que ao receber uma string s, mostre a mensagem 
+ * encriptada de acordo com as regras descritas.
  * 
  * Exemplos:
  * 
@@ -27,14 +31,18 @@ import java.util.Arrays;
  * 
  * Explicação:
  * 
- * Depois de remover os espaços, a string tem 13 caracteres.  está entre 3 e 4, então a string é rescrita na forma de um grid com 4 linhas e 4 colunas:
+ *         Depois de remover os espaços, a string tem 13 caracteres. S
+ *         QRT(13) está entre 3 e 4, então a string é rescrita na forma de um 
+ *         grid com 4 linhas e 4 colunas:
  * 
  * tenh
  * aumb
  * omdi
  * a
  * 
- *         O resultado é obtido ao mostrar os caracteres de cada coluna, com um espaço entre as colunas de texto. A mensagem encriptada é obtida ao mostrar os caracteres de cada linha com um espaço entre as colunas.
+ *         O resultado é obtido ao mostrar os caracteres de cada coluna, 
+ *         com um espaço entre as colunas de texto. A mensagem encriptada é obtida 
+ *         ao mostrar os caracteres de cada linha com um espaço entre as colunas.
  * 
  * Exemplo 2)
  * 
@@ -48,7 +56,9 @@ import java.util.Arrays;
  * 
  * Explicação:
  * 
- *         Depois de remover os espaços a string tem 8 caracteres.  está entre 2 e 3, então a string é reescrita na forma de um grid com 3 linhas e 3 colunas:
+ *         Depois de remover os espaços a string tem 8 caracteres. 
+ *         SQRT(8) está entre 2 e 3, então a string é reescrita na forma 
+ *         de um grid com 3 linhas e 3 colunas:
  * 
  * ola
  * 
@@ -109,14 +119,16 @@ public class Desafio_2_Questao_03
     	
     	for (int i = 0; i < separar.length; i++) 
     	{
+    		System.out.print(" ");
     		for (int j = 0; j < raiz; j++)
     		{
-    			System.out.println(separar[i] + "\t" + i + "\t" + j);
+    			//System.out.println(separar[i].charAt(j) + "\t" + i + "\t" + j);
+    			System.out.print(separar[i].charAt(j));
     		}
     	}
 
     	//System.out.println(r);
-    	System.out.println(Arrays.toString(separar));
+    	//System.out.println(Arrays.toString(separar));
     	
     	
     	
