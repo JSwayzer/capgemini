@@ -36,6 +36,7 @@ public class Desafio_2_Questao_01 {
 
         /* Realizar a ordenação da lista 
          * Executar o laço enquanto i for menor que o tamanho de arr
+         * 
          * */
         for (int i = 0; i < tamanho; i++)
         {
@@ -50,6 +51,7 @@ public class Desafio_2_Questao_01 {
                      * Em que temp receberá o valor de arr[j], que é maior do que arr[i].
                      * Na sequência, valor de arr[j] será substituído pelo valor de arr[i].
                      * E por último, arr[i] receberá o valor de temp. 
+                     * 
                      * */
                 	temp = arr[j];
                 	arr[j] = arr[i];
@@ -62,6 +64,11 @@ public class Desafio_2_Questao_01 {
             }
         }
         
+        /* 
+         * A mediana é encontrada no array "arr" ao se dividir o
+         * valor da variável "tamanho" por 2, o valor resultante
+         * será o índice da mediana dentro do array.
+         * */
         mediana = arr[tamanho / 2];
 
         /* Imprimir em tela a mediana da lista informada. */

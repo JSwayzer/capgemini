@@ -8,7 +8,7 @@ import java.util.Arrays;
  * Então, os caracteres são escritos em um grid, no qual as linhas e 
  * colunas tem as seguintes regras:
  * 
- * 							SQRT(T)<=linha<=coluna<=SQRT(T)
+ *               SQRT(T)<=linha<=coluna<=SQRT(T)
  * 
  *     Considere T, como o tamanho do texto.
  *     Se certifique de que linhas x colunas >= .
@@ -69,7 +69,7 @@ import java.util.Arrays;
  *  */
 
 /**
- * @author Johnny Swayzer Assunção
+ * @author Johnny S Assunção
  *
  */
 
@@ -87,8 +87,12 @@ public class Desafio_2_Questao_03
         
     	s = ("tenha um bom dia minha gostosa");
     	
+    	/* Substituir os espaços por "vazio" */
     	r = s.replace(" ", "");
     	
+    	/* A variável "t" recebe o valor do tamanho do texto, após remover os
+    	 * espaços.
+    	 *  */
     	t = r.length();
     	
     	/*
@@ -117,20 +121,25 @@ public class Desafio_2_Questao_03
     	 *  */
     	String[] separar = r.split("(?<=\\G.{"+raiz+"})");
     	
+    	/* Executar o laço enquanto i for menor que o tamanho de "separar" */
     	for (int i = 0; i < separar.length; i++) 
     	{
+    		/* Imprimir os espaços correspondentes à matriz linhas x colunas. */
     		System.out.print(" ");
+    		
+    		/* Executar o laço enquanto i for menor que o tamanho de "separar" */
     		for (int j = 0; j < raiz; j++)
     		{
+    			/* 
+    			 * Imprimir em tela cada indice do array "separar" no passo "j" 
+    			 * pegando apenas o caracter no passo "i" com uso da função 
+    			 * charAt que retorna o valor no índice informado, neste caso
+    			 * é o valor de "i".
+    			 * 
+    			 * */
     			//System.out.println(separar[i].charAt(j) + "\t" + i + "\t" + j);
-    			System.out.print(separar[i].charAt(j));
+    			System.out.print(separar[j].charAt(i));
     		}
     	}
-
-    	//System.out.println(r);
-    	//System.out.println(Arrays.toString(separar));
-    	
-    	
-    	
     }
 }
