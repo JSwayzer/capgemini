@@ -85,7 +85,7 @@ public class Desafio_2_Questao_03
     	int raiz;
         int t;
         
-    	s = ("tenha um bom dia");
+    	s = ("ola mundo");
     	
     	/* Substituir os espaços por "vazio" */
     	r = s.replace(" ", "");
@@ -121,14 +121,23 @@ public class Desafio_2_Questao_03
     	 *  */
     	String[] separar = r.split("(?<=\\G.{"+raiz+"})");
     	
-    	/* Executar o laço enquanto i for menor que o tamanho de "separar" */
+    	/* Executar o laço enquanto "i" for menor que o tamanho de "separar" */
     	for (int i = 0; i < separar.length; i++) 
     	{
     		/* Imprimir os espaços correspondentes à matriz linhas x colunas. */
     		System.out.print(" ");
     		
-    		/* Executar o laço enquanto i for menor que o tamanho de "separar" */
-    		for (int j = 0; j < raiz; j++)
+    		/* Verificar o tamanho de cada Sting de cada índice do vetor 
+    		System.out.print(separar[i].length() + "-");*/
+    		
+    		/* 
+    		 * Para que posso executar o laço abaixo, sem que ocorra problema
+    		 * de índice fora do série, é utilizado o tamanho do array no passo "i".
+    		 * Isso porque dessa forma o laço será variável de acordo com o
+    		 * tamanho da Sting de cada índice do vetor.
+    		 * 
+    		 * */
+    		for (int j = 0; j < separar[i].length(); j++)
     		{
     			/* 
     			 * Imprimir em tela cada indice do array "separar" no passo "j" 
