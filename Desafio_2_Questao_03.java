@@ -85,7 +85,7 @@ public class Desafio_2_Questao_03
     	int raiz;
         int t;
         
-    	s = ("tenha um bom dia minha gostosa");
+    	s = ("tenha um bom dia");
     	
     	/* Substituir os espaços por "vazio" */
     	r = s.replace(" ", "");
